@@ -21,11 +21,14 @@
         "김구라"];
 
         document.querySelector("#getBtn").addEventListener("click", function(){
-            console.log("버튼이 눌러졌네?");
-            // 0 ~ 30 사이의 랜덤한 정수 얻어내기
-            let ranNum=Math.floor(Math.random()*31);
-            // names 배열에서 랜덤한 인덱스에 해당하는 이름을 p 요소에 출력하기 
-            document.querySelector("#result").innerText=names[ranNum];
+            
+            if(confirm("정말 투표하시겠습니까?")){
+                console.log("버튼이 눌러졌네?");
+                // 0 ~ 30 사이의 랜덤한 정수 얻어내기
+                let ranNum=Math.floor(Math.random()*31);
+                // names 배열에서 랜덤한 인덱스에 해당하는 이름을 p 요소에 출력하기 
+                document.querySelector("#result").innerText=names[ranNum];
+            }
         });
     </script>
 </body>
